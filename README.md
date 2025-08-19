@@ -30,11 +30,17 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 
 ## 🛠️ Tech Stack
 
-    - **Frontend/UI** → [Streamlit](https://streamlit.io/)  
-    - **Agents & LLM Orchestration** → OpenRouter / OpenAI GPT-4o  
-    - **APIs** → HackerNews API, DuckDuckGo Search  
-    - **Content Extraction** → newspaper4k  
-    - **Python Libraries** → 'requests`, `beautifulsoup4`, `langchain`, etc.  
+    1. Python 3.9+
+
+    2.Streamlit – Interactive UI
+
+    3.LangChain / Agents – Multi-agent orchestration
+
+    4.OpenRouter / OpenAI API – LLM backbone
+
+    5.Newspaper4k – Article extraction
+
+    6.DuckDuckGo Search API – Web search integration
 
 ---
 
@@ -75,5 +81,26 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
       4.Finally provides a thoughtful and engaging summary with title, summary, and reference links
       5.The generated content is structured as an Article with a title, summary, and reference links for easy review and use.
        
+##🌟 Example Use Cases
+
+    Researching top HackerNews trends
+
+    Drafting blog posts from live tech stories
+
+    Summarizing user discussions
+
+    Competitive intelligence for startups & developers
 
 
+##📸 Demo Preview
+   <p align="center"> <img    
+   src =<img width="1873" height="879" alt="image" src="https://github.com/user-attachments/assets/9431d902-b903-43c9-b596-d659ac99583e" />width="600"> </p>
+
+
+**📜 License
+
+    This project is licensed under the MIT License – feel free to use, modify, and share!**
+
+##🤝 Contributing
+
+    Pull requests are welcome. For major changes, please open an issue first to discuss your idea.
