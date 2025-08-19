@@ -60,19 +60,20 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 
     Once you provide a valid API key, three specialized AI agents are created:
 
-    HackerNews Researcher: Specializes in getting top stories from HackerNews using the HackerNews API.
-    Web Searcher: Searches the web for additional information on topics using DuckDuckGo search.
-    Article Reader: Reads and extracts content from article URLs using newspaper4k tools.
-    These agents work together as a coordinated team under the HackerNews Team which orchestrates the research process.
+       HackerNews Researcher: Specializes in getting top stories from HackerNews using the HackerNews API.
+       Web Searcher: Searches the web for additional information on topics using DuckDuckGo search.
+       Article Reader: Reads and extracts content from article URLs using newspaper4k tools.
+       These agents work together as a coordinated team under the HackerNews Team which orchestrates the research process.
 
     Enter your research query in the provided text input field. This could be a topic, keyword, or specific question related to HackerNews stories or users.
 
     The HackerNews Team follows a structured workflow:
 
-    First searches HackerNews for relevant stories based on your query
-    Uses the Article Reader to extract detailed content from the story URLs
-    Leverages the Web Searcher to gather additional context and information
-    Finally provides a thoughtful and engaging summary with title, summary, and reference links
-    The generated content is structured as an Article with a title, summary, and reference links for easy review and use.
+      1.First searches HackerNews for relevant stories based on your query
+      2.Uses the Article Reader to extract detailed content from the story URLs
+      3.Leverages the Web Searcher to gather additional context and information
+      4.Finally provides a thoughtful and engaging summary with title, summary, and reference links
+      5.The generated content is structured as an Article with a title, summary, and reference links for easy review and use.
 
        
+
