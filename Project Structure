@@ -1,0 +1,6 @@
+AgentHive/
+│── research_agent.py      # Main Streamlit app
+│── requirements.txt       # Dependencies
+│── .env.example           # Sample environment file
+│── README.md              # Project documentation
+└── utils/                 # Helper functions (API calls, parsing, etc.)
