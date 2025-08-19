@@ -92,15 +92,6 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
     Competitive intelligence for startups & developers
 
 
-##📸 Demo Preview
- 
-
-<p align="center">
-  <img src=<img width="1873" height="879" alt="Screenshot 2025-08-20 044605" src="https://github.com/user-attachments/assets/a24a07ee-eeb5-477a-b79e-9de37f6d7342" />
-
-</p>
-
-
 **📜 License
 
     This project is licensed under the MIT License – feel free to use, modify, and share!**
@@ -108,4 +99,5 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 ##🤝 Contributing
 
     Pull requests are welcome. For major changes, please open an issue first to discuss your idea.
+
 
