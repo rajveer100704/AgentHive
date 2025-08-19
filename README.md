@@ -93,8 +93,12 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 
 
 ##📸 Demo Preview
-   <p align="center"> <img    
-   src =<img width="1873" height="879" alt="image" src="https://github.com/user-attachments/assets/9431d902-b903-43c9-b596-d659ac99583e" />width="600"> </p>
+ 
+
+<p align="center">
+  <img src=<img width="1873" height="879" alt="Screenshot 2025-08-20 044605" src="https://github.com/user-attachments/assets/a24a07ee-eeb5-477a-b79e-9de37f6d7342" />
+
+</p>
 
 
 **📜 License
@@ -104,3 +108,4 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 ##🤝 Contributing
 
     Pull requests are welcome. For major changes, please open an issue first to discuss your idea.
+
