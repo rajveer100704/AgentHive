@@ -1,4 +1,4 @@
-# 📰 Multi-Agent AI Researcher
+# 📰 Multi-Agent AI Researcher : AgentHive
 
     A **Streamlit-powered AI application** that leverages a team of specialized agents to research **top HackerNews stories** and generate insightful summaries, reports, and     blog-style content.  
     This project demonstrates **multi-agent collaboration**, **LLM orchestration**, and **real-world data integration** — making it production-ready and portfolio-worthy.
@@ -7,7 +7,7 @@
 
 ## 🚀 Overview
 
-    The Multi-Agent AI Researcher is built to simulate a research assistant team.  
+    AgentHive is built to simulate a research assistant team.  
     Instead of relying on a single LLM, it coordinates multiple AI agents — each with a specialized role:
 
      - 🔍 **HackerNews Researcher** → Fetches top stories and user details using HackerNews API.  
@@ -99,6 +99,7 @@ These agents collaborate under a **HackerNews Team Orchestrator** to deliver str
 ##🤝 Contributing
 
     Pull requests are welcome. For major changes, please open an issue first to discuss your idea.
+
 
 
 
