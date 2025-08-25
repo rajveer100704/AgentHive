@@ -4,7 +4,10 @@ from app.utils import initialize_logging
 
 app = FastAPI(title="AgentHive Backend API")
 
+# Initialize logging
 initialize_logging()
+
+# Include the updated routes
 app.include_router(routes.router)
 
 @app.get("/")
