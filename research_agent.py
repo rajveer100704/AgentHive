@@ -1,68 +1,45 @@
-# Import the required libraries
-import streamlit as st
-from agno.agent import Agent
-from agno.models.openai import OpenAIChat
-from agno.team import Team
-from agno.tools.duckduckgo import DuckDuckGoTools
-from agno.tools.hackernews import HackerNewsTools
-from agno.tools.newspaper4k import Newspaper4kTools
-from pydantic import BaseModel
-from typing import List         
 import os
+import json
+from app.config import VECTOR_DIM, EMBEDDING_MODEL
+from retrieval.vector_store import VectorStore
+from ingestion.preprocess import preprocess_data
+from sentence_transformers import SentenceTransformer
+from typing import List, Dict
 
-# Set up the Streamlit app
-st.title("Multi-Agent AI Researcher 🔍🤖")
-st.caption("This app allows you to research top stories and users on HackerNews and write blogs, reports and social posts.")
+# Initialize embedding model
+embedding_model = SentenceTransformer(EMBEDDING_MODEL)
 
-# Get OpenAI API key from user
-openai_api_key = st.text_input("OpenAI API Key", type="password")
-os.environ["OPENAI_API_KEY"] = openai_api_key
+# Vector store for documents
+vector_store = VectorStore()
 
-if openai_api_key:
-    hn_researcher = Agent(
-        name="HackerNews Researcher",
-        model=OpenAIChat(id="gpt-4o-mini"),
-        role="Gets top stories from hackernews.",
-        tools=[HackerNewsTools()],
-    )
+def embed_text(texts: List[str]) -> List[List[float]]:
+    """Generate embeddings for a list of texts."""
+    embeddings = embedding_model.encode(texts, convert_to_numpy=True)
+    return embeddings.tolist()
 
-    web_searcher = Agent(
-        name="Web Searcher",
-        model=OpenAIChat(id="gpt-4o-mini"),
-        role="Searches the web for information on a topic",
-        tools=[DuckDuckGoTools()],
-        add_datetime_to_instructions=True,
-    )
+def add_documents(documents: List[Dict]):
+    """Preprocess, embed, and add documents to the vector store."""
+    processed = preprocess_data(documents)
+    texts = [item["text"] for item in processed]
+    embeddings = embed_text(texts)
+    for doc, vec in zip(processed, embeddings):
+        vector_store.add_vector(vec, metadata=doc.get("meta", {}))
 
-    article_reader = Agent(
-        name="Article Reader",
-        model=OpenAIChat(id="gpt-4o-mini"),
-        role="Reads articles from URLs.",
-        tools=[Newspaper4kTools()],
-    )
+def query_agent(query: str, top_k: int = 5):
+    """Retrieve top-k relevant documents from vector store."""
+    query_embedding = embed_text([query])[0]
+    results = vector_store.similarity_search(query_embedding, top_k)
+    return [{"text": r["metadata"].get("text", ""), "meta": r["metadata"]} for r in results]
 
-    hackernews_team = Team(
-        name="HackerNews Team",
-        mode="coordinate",
-        model=OpenAIChat(id="gpt-4o-mini"),
-        members=[hn_researcher, web_searcher, article_reader],
-        instructions=[
-            "First, search hackernews for what the user is asking about.",
-            "Then, ask the article reader to read the links for the stories to get more information.",
-            "Important: you must provide the article reader with the links to read.",
-            "Then, ask the web searcher to search for each story to get more information.",
-            "Finally, provide a thoughtful and engaging summary.",
-        ],
-        show_tool_calls=True,
-        markdown=True,
-        debug_mode=True,
-        show_members_responses=True,
-    )
-
-    # Input field for the report query
-    query = st.text_input("Enter your report query")
-
-    if query:
-        # Get the response from the assistant
-        response = hackernews_team.run(query, stream=False)
-        st.write(response.content)
+if __name__ == "__main__":
+    # Example usage
+    docs = [
+        {"text": "Artificial Intelligence is transforming the world.", "meta": {"source": "wiki"}},
+        {"text": "Machine learning models can be deployed in production.", "meta": {"source": "blog"}}
+    ]
+    add_documents(docs)
+    query = "AI applications"
+    results = query_agent(query)
+    print("Query Results:")
+    for r in results:
+        print(r)
