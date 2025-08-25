@@ -1,0 +1,35 @@
+AgentHive/
+├── app/
+│   ├── main.py                # Core application entry (FastAPI)
+│   ├── utils.py               # Helper functions, logging, config loaders
+│   └── config.py              # Configuration settings (DB, embeddings, debug)
+├── ingestion/
+│   ├── ingest_data.py         # Data ingestion scripts (JSON, CSV)
+│   ├── preprocess.py          # Preprocessing / cleaning / tokenization
+│   └── __init__.py
+├── retrieval/
+│   ├── search.py              # Retrieval / similarity search logic
+│   ├── vector_store.py        # Vector storage / similarity / embeddings
+│   └── __init__.py
+├── backend/
+│   ├── main.py                # FastAPI backend entry
+│   ├── routes.py              # API routes (health check, CRUD)
+│   ├── models.py              # Pydantic / database models
+│   ├── requirements.txt       # Python dependencies
+│   ├── Dockerfile             # Docker config for backend
+│   └── __init__.py
+├── frontend/
+│   ├── package.json           # Frontend dependencies
+│   ├── public/
+│   │   └── index.html
+│   └── src/
+│       ├── index.js
+│       └── App.js
+├── tests/                     # Unit tests / integration tests
+├── .github/                   # CI/CD workflows
+├── clean_nulls.py             # Data cleaning script
+├── research_agent.py          # Multi-agent research logic
+├── research_agent_llama3.py   # LLaMA3 research agent logic
+├── README.md                  # Project description and run instructions
+├── requirements.txt           # Backend dependencies
+└── .gitignore                 # Ignore patterns for Git
