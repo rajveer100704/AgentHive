@@ -69,7 +69,7 @@
 
 ## 📸 Demo
 
-    Frontend (React UI):  
+    ![Demo Screenshot](assets/demo.png)
 
 
 
@@ -111,6 +111,7 @@
 📜 License
 
 This project is licensed under the MIT License.
+
 
 
 
