@@ -67,14 +67,6 @@
 
 ---
 
-## 📸 Demo
-
-    ![Demo Screenshot](assets/demo.png)
-
-
-
----
-
 ## 📦 Installation & Setup
 
     1. **Clone Repository**
@@ -111,6 +103,7 @@
 📜 License
 
 This project is licensed under the MIT License.
+
 
 
 
