@@ -8,7 +8,7 @@
     It provides a **frontend for interaction** and a **backend API** to manage agent workflows, making it ideal for research, prototyping, and production-ready AI systems.
 
 ---
-## 🎯 Purpose
+## 🎯 Features
 
     Research top stories and users on HackerNews.
     Utilize a team of **AI assistants specialized in story and user research**.
@@ -105,6 +105,7 @@
 📜 License
 
 This project is licensed under the MIT License.
+
 
 
 
