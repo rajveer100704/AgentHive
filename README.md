@@ -8,7 +8,12 @@
     It provides a **frontend for interaction** and a **backend API** to manage agent workflows, making it ideal for research, prototyping, and production-ready AI systems.
 
 ---
+## 🎯 Purpose
 
+    Research top stories and users on HackerNews.
+    Utilize a team of **AI assistants specialized in story and user research**.
+    Generate **blog posts, reports, and social media content based on your research queries**.
+---
 ## 🎯 Purpose
 
     - To create a **scalable AI application framework**.  
@@ -59,15 +64,15 @@
 
 ## 📸 Demo
 
-Frontend (React UI):  
-![Frontend Demo](A_digital_screenshot_of_a_web_application_interfac.png)
+    Frontend (React UI):  
+    ![Frontend Demo](A_digital_screenshot_of_a_web_application_interfac.png)
 
 ---
 
 ## 📦 Installation & Setup
 
     1. **Clone Repository**
-      ```bash
+         bash
          git clone https://github.com/rajveer100704/AgentHive.git
          cd AgentHive
     2. Start Backend
@@ -86,22 +91,21 @@ Frontend (React UI):
 
 💡 Author
 
-👤 Rajveer Saggu
+    👤 Rajveer Singh Saggu
 
-Aspiring AI/Fullstack Engineer
-
-Passionate about AI Systems, Cloud, and Deployment
-
-Portfolio-ready project for SDE / AI Engineer roles
+    Aspiring AI/Fullstack Engineer
+    Passionate about AI Systems, Cloud, and Deployment
+    Portfolio-ready project for SDE / AI Engineer roles
 
 ⭐ Contributing
 
-Pull requests are welcome!
-For major changes, please open an issue first to discuss what you’d like to change.
+    Pull requests are welcome!
+    For major changes, please open an issue first to discuss what you’d like to change.
 
 📜 License
 
 This project is licensed under the MIT License.
+
 
 
 
