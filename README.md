@@ -70,7 +70,7 @@
 ## 📸 Demo
 
     Frontend (React UI):  
-    ![Frontend Demo]<img width="693" height="449" alt="Screenshot 2025-08-26 041014" src="https://github.com/user-attachments/assets/035aa2e7-2fa4-4c9d-8fc7-0169372f8fec" />
+
 
 
 ---
@@ -111,6 +111,7 @@
 📜 License
 
 This project is licensed under the MIT License.
+
 
 
 
