@@ -11,7 +11,7 @@ databases==0.9.0
 sentence-transformers==2.2.2
 torch==2.2.0
 numpy==1.26.0
-scipy==1.12.1
+scipy==1.11.4
 scikit-learn==1.3.2
 
 # Multi-agent / LLM integration (new modular LangChain)
@@ -30,3 +30,4 @@ loguru==0.7.0
 # For development & testing
 pytest==8.2.0
 flake8==7.3.0
+
