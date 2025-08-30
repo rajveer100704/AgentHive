@@ -1,7 +1,7 @@
 # FastAPI backend
-fastapi==0.105.0
+fastapi==0.115.5
 uvicorn[standard]==0.23.1
-pydantic==2.2.1
+pydantic==2.11.7
 
 # Database / ORM
 sqlalchemy==2.0.22
@@ -24,10 +24,9 @@ langchain-text-splitters==0.3.9
 
 # Utilities
 python-dotenv==1.0.1
-requests==2.31.0
-loguru==0.7.0
+requests==2.32.3
+loguru==0.7.2
 
 # For development & testing
-pytest==8.2.0
-flake8==7.3.0
-
+pytest==8.3.3
+flake8==7.1.1
